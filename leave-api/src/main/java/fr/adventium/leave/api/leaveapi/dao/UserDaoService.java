@@ -1,10 +1,11 @@
-package fr.adventium.leave.api.leaveapi.user;
+package fr.adventium.leave.api.leaveapi.dao;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
+
+import fr.adventium.leave.api.leaveapi.entities.User;
 
 @Component
 public class UserDaoService {
@@ -12,9 +13,9 @@ public class UserDaoService {
 	private static List<User> users = new ArrayList<User>();
 	private static Integer usersCount = users.size(); 
 	static {
-		users.add(new User(1,"Wissem", new Date()));
-		users.add(new User(1,"Mmo", new Date()));
-		users.add(new User(1,"Balla", new Date()));
+//		users.add(new User(1,"Wissem", new Date()));
+//		users.add(new User(1,"Mmo", new Date()));
+//		users.add(new User(1,"Balla", new Date()));
 	}
 
 	
