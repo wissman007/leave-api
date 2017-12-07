@@ -3,13 +3,20 @@ package fr.adventium.leave.api.leaveapi.resources;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +28,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import fr.adventium.leave.api.leaveapi.dao.repositories.LeaveRepository;
 import fr.adventium.leave.api.leaveapi.entities.Leave;
+import fr.adventium.leave.api.leaveapi.services.PdfGeneratorService;
 import fr.adventium.leave.api.leaveapi.user.exceptions.LeaveNotSavedException;
 
 @RestController
@@ -28,6 +36,10 @@ public class LeaveRsource {
 	
 	@Autowired
 	private LeaveRepository leaveRepository;
+	
+	@Autowired
+	private PdfGeneratorService pdfGeneratorService;
+	
 	
 	@CrossOrigin(origins="*")
 	@GetMapping(path="/leaves")
@@ -62,6 +74,32 @@ public class LeaveRsource {
 		resource.add(linkTo.withRel("all-leaves"));
 		
 		return resource ;
+	}
+	@CrossOrigin(origins="*")
+	@GetMapping(path="/leaves/{id}/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
+	public ResponseEntity<InputStreamResource> generateLeavePdf(@PathVariable int id) throws IOException{
+		Optional<Leave> leaveOption = this.leaveRepository.findById(id); 
+		
+//		if(!leaveOption.isPresent()){
+//			throw new LeaveNotSavedException("id-"+id);
+//		}
+		
+		
+		 HttpHeaders headers = new HttpHeaders();
+	        headers.add("Content-Disposition", "inline; filename=test.pdf");
+		 
+		//ClassPathResource pdfFile = new ClassPathResource(pdfGeneratorService.generatePdf(""));
+	        File file = new File(pdfGeneratorService.generatePdf(""));
+	        FileInputStream inputStream = new FileInputStream(file);
+	        
+		return ResponseEntity
+	            .ok()
+	            .headers(headers)
+	           
+	            .contentType(
+	                    MediaType.APPLICATION_PDF)
+	            .body(new InputStreamResource(inputStream));
+	
 	}
 	
 }
