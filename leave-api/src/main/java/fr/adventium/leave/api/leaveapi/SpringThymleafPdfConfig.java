@@ -31,13 +31,26 @@ public class SpringThymleafPdfConfig {
 		return templateEngine;
 	}
 
-
+	
+//	 @Bean
+//	 public TemplateEngine emailTemplateEngine() {
+//	        final SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+//	        // Resolver for HTML emails (except the editable one)
+//	        templateEngine.addTemplateResolver(templatePdfResolver());
+//	     
+//	        return templateEngine;
+//	    }
+	
+	 
+	 
+	 
 	private ITemplateResolver templatePdfResolver() {
 		final ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
 		templateResolver.setOrder(Integer.valueOf(1));
 		templateResolver.setResolvablePatterns(Collections.singleton("html/*"));
 		templateResolver.setPrefix("/templates/");
 		templateResolver.setSuffix(".html");
+		
 		templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
         templateResolver.setCacheable(false);

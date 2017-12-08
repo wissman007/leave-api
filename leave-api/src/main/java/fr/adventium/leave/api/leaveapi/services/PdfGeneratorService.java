@@ -26,14 +26,14 @@ public class PdfGeneratorService {
 		try {
 			Context context = new Context();
 			context.setVariable("name", "Thomas");
-			 
+			context.setVariable("imageResourceName", "static/img/"); 
 			// Get the plain HTML with the resolved ${name} variable!
 			String html = templateEngine.process("template", context);
 												 	
 			outputStream = new FileOutputStream("C:\\Developpement\\test.pdf");
 			ITextRenderer renderer = new ITextRenderer();
 			
-			renderer.setDocumentFromString(html, "file:///C:/Users/ceugenawa-e/git/leave-api/leave-api/src/main/resources/");
+			renderer.setDocumentFromString(html);
 			
 			renderer.layout();
 			renderer.createPDF(outputStream);
