@@ -35,18 +35,18 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>2.0.0.M6</version>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.boot</groupId> -->
-<!-- 			<artifactId>spring-boot-starter-security</artifactId> -->
-<!-- 			<version>2.0.0.M6</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-security</artifactId> -->
+		<!-- <version>2.0.0.M6</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-rest-hal-browser</artifactId>
 			<version>3.0.1.RELEASE</version>
 		</dependency>
-		
-		
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
@@ -78,7 +78,7 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<version>2.0.0.M6</version>
-			
+
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -92,23 +92,23 @@
 			<version>2.0.0.M6</version>
 			<exclusions>
 				<exclusion>
-				      <groupId>org.springframework</groupId>
-				      <artifactId>spring-aop</artifactId>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-aop</artifactId>
 				</exclusion>
 				<exclusion>
-				      <groupId>org.springframework.security</groupId>
-				      <artifactId>spring-security-config</artifactId>
+					<groupId>org.springframework.security</groupId>
+					<artifactId>spring-security-config</artifactId>
 				</exclusion>
 				<exclusion>
-			    	<groupId>org.springframework.security</groupId>
-	      			<artifactId>spring-security-web</artifactId>
+					<groupId>org.springframework.security</groupId>
+					<artifactId>spring-security-web</artifactId>
 				</exclusion>
 			</exclusions>
-			
+
 		</dependency>
-		
+
 		<!-- Thymleaf + flying saucer -->
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
@@ -119,13 +119,14 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 			<version>2.0.0.M6</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf</artifactId>
 			<version>3.0.9.RELEASE</version>
 		</dependency>
-		
+
+				
 
 		<!-- https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
 		<dependency>
@@ -133,53 +134,53 @@
 			<artifactId>flying-saucer-pdf</artifactId>
 			<version>9.1.9</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-<dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.5</version>
-</dependency>
-		
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+
 		<!-- End -->
-		
+
 		<dependency>
 			<groupId>org.springframework.security.oauth</groupId>
 			<artifactId>spring-security-oauth2</artifactId>
 			<version>2.2.1.RELEASE</version>
 			<exclusions>
 				<exclusion>
-					 <groupId>org.springframework</groupId>
-      				<artifactId>spring-beans</artifactId>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
 				</exclusion>
 				<exclusion>
 					<groupId>org.springframework</groupId>
-      				<artifactId>spring-core</artifactId>
-				</exclusion>	
-				<exclusion>
-					 <groupId>org.springframework</groupId>
-      					<artifactId>spring-context</artifactId>
+					<artifactId>spring-core</artifactId>
 				</exclusion>
-<!-- 				<exclusion> -->
-<!-- 					<groupId>org.springframework.security</groupId> -->
-<!--       				<artifactId>spring-security-core</artifactId> -->
-<!-- 				</exclusion> -->
-				
-<!-- 				<exclusion> -->
-<!-- 					<groupId>org.springframework.security</groupId> -->
-<!--       				<artifactId>spring-security-config</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>org.springframework.security</groupId> -->
-<!--       				<artifactId>spring-security-web</artifactId> -->
-<!-- 				</exclusion> -->
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+				<!-- <exclusion> -->
+				<!-- <groupId>org.springframework.security</groupId> -->
+				<!-- <artifactId>spring-security-core</artifactId> -->
+				<!-- </exclusion> -->
+
+				<!-- <exclusion> -->
+				<!-- <groupId>org.springframework.security</groupId> -->
+				<!-- <artifactId>spring-security-config</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>org.springframework.security</groupId> -->
+				<!-- <artifactId>spring-security-web</artifactId> -->
+				<!-- </exclusion> -->
 			</exclusions>
 		</dependency>
 		<dependency>
-         <groupId>org.springframework.security</groupId>
-         <artifactId>spring-security-jwt</artifactId>
-         <version>1.0.8.RELEASE</version>
-      </dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+			<version>1.0.8.RELEASE</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

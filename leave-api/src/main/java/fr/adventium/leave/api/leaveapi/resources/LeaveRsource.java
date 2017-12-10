@@ -28,6 +28,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,7 +44,9 @@ import fr.adventium.leave.api.leaveapi.services.PdfGeneratorService;
 import fr.adventium.leave.api.leaveapi.user.exceptions.LeaveNotSavedException;
 
 @RestController
+//@Controller
 public class LeaveRsource {
+	
 	
 	@Autowired
 	private LeaveRepository leaveRepository;
@@ -57,6 +60,13 @@ public class LeaveRsource {
 	public List<Leave> retrieveLeaves(){
 		return leaveRepository.findAll();
 	}
+	
+	
+	@CrossOrigin(origins="*")
+	@GetMapping("/template")
+    public String home() {
+        return "/template";
+    }
 	
 	
 	@PostMapping(path="/leaves")
