@@ -103,38 +103,10 @@ body {
 
 /* regular */ 
 @font-face {
-    font-family: "GHEA Grapalat";
-    src: url("/fonts/GHEAGrpalatReg.ttf");
+    font-family: "Arial Unicode MS";
+    src: url("fonts/ARIALUNI.TTF");
    -fs-pdf-font-embed: embed;
    -fs-pdf-font-encoding: Identity-H; 
-}
-
-/* regular italic*/ 
-@font-face {
-    font-family: "GHEA Grapalat";
-    src: url("/fonts/GHEAGrapalatRit.ttf");
-   -fs-pdf-font-embed: embed;
-   -fs-pdf-font-encoding: Identity-H;
-   font-style: italic; 
-}
-
-/* bold */ 
-@font-face {
-    font-family: "GHEA Grapalat";
-    src: url("/fonts/GHEAGpalatBld.ttf");
-   -fs-pdf-font-embed: embed;
-   -fs-pdf-font-encoding: Identity-H;
-   font-weight: bold; 
-}	
-
-/* bold italic*/ 
-@font-face {
-    font-family: "GHEA Grapalat";
-    src: url("/fonts/GHEAGrapalatBlit.ttf");
-   -fs-pdf-font-embed: embed;
-   -fs-pdf-font-encoding: Identity-H;
-   font-weight: bold; 
-   font-style: italic; 
 }
 
 

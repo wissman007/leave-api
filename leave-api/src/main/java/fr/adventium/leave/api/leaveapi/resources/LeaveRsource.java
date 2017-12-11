@@ -98,7 +98,7 @@ public class LeaveRsource {
 	}
 	@CrossOrigin(origins="*")
 	@GetMapping(path="/leaves/{id}/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
-	public ResponseEntity<InputStreamResource> generateLeavePdf(@PathVariable int id) throws IOException{
+	public ResponseEntity<InputStreamResource> generateLeavePdf(@PathVariable int id) throws Exception{
 		Optional<Leave> leaveOption = this.leaveRepository.findById(id); 
 		
 //		if(!leaveOption.isPresent()){
@@ -110,7 +110,7 @@ public class LeaveRsource {
 	        headers.add("Content-Disposition", "inline; filename=test.pdf");
 		 
 		//ClassPathResource pdfFile = new ClassPathResource(pdfGeneratorService.generatePdf(""));
-	        File file = new File(pdfGeneratorService.generatePdf(""));
+	        File file = new File(pdfGeneratorService.generateHtmlToPdf(""));
 	        FileInputStream inputStream = new FileInputStream(file);
 	        
 		return ResponseEntity

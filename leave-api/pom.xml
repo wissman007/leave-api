@@ -126,13 +126,60 @@
 			<version>3.0.9.RELEASE</version>
 		</dependency>
 
-				
+
 
 		<!-- https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
 		<dependency>
 			<groupId>org.xhtmlrenderer</groupId>
 			<artifactId>flying-saucer-pdf</artifactId>
 			<version>9.1.9</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-parent -->
+		<!-- https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-core -->
+		<dependency>
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-core</artifactId>
+			<version>0.0.1-RC12</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-pdfbox -->
+		<dependency>
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-pdfbox</artifactId>
+			<version>0.0.1-RC12</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-rtl-support -->
+		<dependency>
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-rtl-support</artifactId>
+			<version>0.0.1-RC12</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-jsoup-dom-converter -->
+		<dependency>
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-jsoup-dom-converter</artifactId>
+			<version>0.0.1-RC12</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-svg-support -->
+		<dependency>
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-svg-support</artifactId>
+			<version>0.0.1-RC12</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-log4j -->
+		<dependency>
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-log4j</artifactId>
+			<version>0.0.1-RC12</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-java2d -->
+		<dependency>
+			<groupId>com.openhtmltopdf</groupId>
+			<artifactId>openhtmltopdf-java2d</artifactId>
+			<version>0.0.1-RC12</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
